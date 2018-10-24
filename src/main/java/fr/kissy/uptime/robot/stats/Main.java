@@ -99,8 +99,8 @@ public class Main {
                 "<html>\n" +
                 "<head>\n" +
                 "    <title>Uptime report</title>\n" +
-                "    <script src=\"//visjs.org/dist/vis.js\"></script>\n" +
-                "    <link href=\"//visjs.org/dist/vis-timeline-graph2d.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n" +
+                "    <script src=\"//cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js\"></script>\n" +
+                "    <link href=\"//cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-timeline-graph2d.min.css\" rel=\"stylesheet\" type=\"text/css\" />\n" +
                 "</head>\n" +
                 "<body>\n" +
                 "\n" +
