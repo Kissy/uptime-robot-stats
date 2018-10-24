@@ -32,9 +32,9 @@ public class Main {
     @Parameter(names={"--monitor", "-m"}, description = "List of monitors names, default to all monitors", variableArity = true)
     private List<String> monitors = new ArrayList<>();
     @Parameter(names={"--start-date", "-st"}, description = "Ignore downtime before given date excluded, default to first day of current month", converter = LocalDateTimeConverter.class)
-    private LocalDateTime startDate = LocalDateTime.now().withDayOfMonth(1).with(LocalTime.MIDNIGHT);
+    private LocalDateTime startDate = LocalDate.now().withDayOfMonth(1).atStartOfDay();
     @Parameter(names={"--end-date", "-ed"}, description = "Ignore downtime after given date included, default to first day of next month", converter = LocalDateTimeConverter.class)
-    private LocalDateTime endDate = LocalDateTime.now().withDayOfMonth(1).with(LocalTime.MIDNIGHT).plusMonths(1);
+    private LocalDateTime endDate = LocalDate.now().withDayOfMonth(1).plusMonths(1).atStartOfDay();
     @Parameter(names={"--billable-period", "-bp"}, description = "Ignore downtime outside of given periods, default to 08:30-19:00", converter = BillablePeriodConverter.class)
     private List<BillablePeriod> billablePeriods = Collections.singletonList(BillablePeriod.between(LocalTime.of(8, 30, 0), LocalTime.of(19, 0, 0)));
     @Parameter(names = {"--generate-report", "-gr"})
